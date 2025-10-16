@@ -1,12 +1,20 @@
 const form = document.getElementById("feedback-form")
 const formResponse = document.getElementById("form-response")
 
+function feedbackDisplay (feedbackText) {
+    const box = document.getElementById("feedback-display")
+    const item = document.createElement('div');
+    item.textContent = feedbackText.trim();
+    box.appendChild(item);
+}
+
 form.addEventListener("submit", (event) => {
     event.preventDefault();
     const feedback = document.getElementById("comments").value;
 
     if (feedback.length > 10) {
         formResponse.textContent = "Thank you for your feedback."
+        feedbackDisplay(feedback); 
         form.reset();
     }
     else {
