@@ -13,3 +13,16 @@ form.addEventListener("submit", (event) => {
         formResponse.textContent = "Please provide more feedback."
     }
 })
+
+let charCount = 0
+
+document.querySelector("html").addEventListener("keydown", event => {
+    if (event.key.length === 1) {
+    charCount += 1;
+  }
+  else if (event.key === "Backspace") {
+    charCount = Math.max(0, charCount - 1);
+  }
+
+  console.log(charCount);
+});
