@@ -4,23 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Feedback Form</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="tooltip" class="tooltip-container">
+    <span class="tooltip-trigger"></span>
+    <span class="tooltip-text"></span>
+</div>
     <form id="feedback-form">
         <label for="feedback">Feedback Form:</label>
         <br>
         <label>
         <p>Name</p>
-            <input type="text" name="name" required placeholder = "Your name"/>
+            <input type="text" name="name" required placeholder = "Your name" data-tooltip="Type your name"/>
         </label>
         <br>
         <label>
             <p>Email</p>
-            <input type="email" name="email" required placeholder = "Your email"/>
+            <input type="text" name="email" required placeholder = "Your email" data-tooltip="Type your email"/>
         </label>
         <br>
         <P>Comments</P>
-        <textarea name="comments" id="comments"></textarea>
+        <textarea name="comments" id="comments" data-tooltip="Type any comments"></textarea>
         <br>
         <button type="submit">Submit</button>
     </form>

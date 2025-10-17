@@ -1,0 +1,14 @@
+/* Tooltip CSS */
+#tooltip {
+  position: fixed;
+  display: none;
+  background: #000;
+  color: #fff;
+  padding: 6px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  pointer-events: none;
+  transform: translateY(-8px);
+  z-index: 9999;
+}
+#tooltip[data-show] { display: block; }
